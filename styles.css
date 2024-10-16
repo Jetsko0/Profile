@@ -1,70 +1,203 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background: linear-gradient( #ee9ca7,#4CB8C4,#ffdde1);
+body {
+    background: linear-gradient(#ee9ca7, #4CB8C4, #ffdde1);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Poppins";
+    font-family: 'Roboto', sans-serif; /* Sử dụng font Roboto cho body */
     color: white;
+    animation: bgAnimation 8s infinite alternate;
 }
-.card{
+
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.card {
     height: 500px;
     width: 350px;
     background: #242628;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
-    border: 3px solid white;
+    border: 3.5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s, box-shadow 0.5s;
+    position: relative;
+    overflow: hidden;
 }
-img{
-    object-fit: cover;
-    width: 140px;
-    height: 220px;
-    object-position: center;
+
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
-.card_img{
+
+.card_img {
     width: 150px;
     height: 150px;
-    border: 4px solid #1D2B64 ;
+    border: 4px solid #1D2B64;
     border-radius: 50%;
     overflow: hidden;
     margin: 25px auto;
+    transition: transform 0.5s;
 }
-.card p{
-    color:#c3cfe2;
+
+.card_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
 }
-.social{
-    margin:25px 0 ;
+
+.card_img:hover img {
+    transform: scale(1.2);
+}
+
+.card h2 {
+    margin-top: 10px;
+    font-size: 26px;
+    font-weight: 700; /* Đổi trọng số chữ thành 700 */
+    font-family: 'Montserrat', sans-serif; /* Sử dụng font Montserrat cho tiêu đề */
+}
+
+.card p {
+    color: #c3cfe2;
+    margin: 5px 0;
+    font-size: 16px; /* Thay đổi kích thước font cho đoạn văn */
+}
+
+.social {
+    margin: 25px 0;
     height: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
-.social a{
+
+.social a {
     color: beige;
-    margin: 10px 10px;  
-    font-size: 20px;
-    transition: 0.4s;
+    font-size: 24px;
+    transition: transform 0.4s, color 0.4s;
 }
-.card button{
-    width: 120px;
-    height: 60px;
-    border: 2px solid #7AA1D2 ;
+
+.social a:hover {
+    color: #603813;
+    transform: translateY(-5px);
+}
+
+.card button {
+    width: 130px;
+    height: 50px;
+    border: 2px solid #7AA1D2;
     background: transparent;
     color: white;
     border-radius: 10px;
-    transition: 0.5s;
+    transition: background 0.5s, transform 0.5s;
     font-weight: bold;
     cursor: pointer;
     font-size: 15px;
 }
-.card button:hover{
+
+.card button:hover {
     background: #003973;
+    transform: translateY(-5px);
 }
-.social a:hover{
-    color:#603813;
+
+
+.card button {
+    width: 130px;
+    height: 50px;
+    border: 2px solid #7AA1D2;
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.card button:hover {
+    background: #003973;
+    transform: translateY(-5px);
+}
+
+/* Hiệu ứng trái tim */
+.hearts span {
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: pink;
+    opacity: 0.6;
+    clip-path: polygon(50% 0%, 0% 50%, 50% 100%, 100% 50%);
+    animation: float 5s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(50px, -100px) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-30px, -200px) scale(0.8);
+        opacity: 0;
+    }
+}
+
+.hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(3) {
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(4) {
+    left: 70%;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(5) {
+    left: 90%;
+    animation-delay: 4s;
+}
+.hearts span:nth-child(6) {
+    left: 90%;
+    animation-delay: 4s;
+}
+.hearts span:nth-child(7) {
+    left: 90%;
+    animation-delay: 4s;
+}
+.hearts span:nth-child(8) {
+    left: 90%;
+    animation-delay: 4s;
+}
+.hearts span:nth-child(9) {
+    left: 90%;
+    animation-delay: 4s;
+}
+.hearts span:nth-child(10) {
+    left: 90%;
+    animation-delay: 4s;
 }
