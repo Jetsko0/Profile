@@ -182,22 +182,53 @@ body {
     animation-delay: 4s;
 }
 .hearts span:nth-child(6) {
-    left: 90%;
+    left: 30%;
     animation-delay: 4s;
 }
 .hearts span:nth-child(7) {
-    left: 90%;
+    left: 25%;
     animation-delay: 4s;
 }
 .hearts span:nth-child(8) {
-    left: 90%;
+    left: 59%;
     animation-delay: 4s;
 }
 .hearts span:nth-child(9) {
-    left: 90%;
+    left: 65%;
     animation-delay: 4s;
 }
 .hearts span:nth-child(10) {
     left: 90%;
     animation-delay: 4s;
+}
+.hearts span:nth-child(11) {
+    left: 45%;
+    animation-delay: 5s;
+}
+
+.hearts span:nth-child(12) {
+    left: 75%;
+    animation-delay: 6s;
+}
+
+.hearts span:nth-child(13) {
+    left: 45%;
+    animation-delay: 7s;
+}
+.email-corner {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    color: palevioletred;
+    font-size: 14px;
+}
+
+.email-corner a {
+    color: palevioletred;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.email-corner a:hover {
+    color: #7AA1D2;
 }
