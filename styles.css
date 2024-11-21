@@ -193,6 +193,6 @@ body {
 
 @media (max-width: 480px) {
     .christmas-tree {
-        width: 200px; /* Further scale down for mobile */
+        width: 100px; /* Further scale down for mobile */
     }
 }
