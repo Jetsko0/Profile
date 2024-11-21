@@ -1,3 +1,4 @@
+/* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap');
 
 * {
@@ -12,14 +13,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto', sans-serif; /* Sử dụng font Roboto cho body */
+    font-family: 'Roboto', sans-serif;
     color: white;
-    animation: bgAnimation 8s infinite alternate;
-}
-
-@keyframes bgAnimation {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
+    overflow: hidden;
 }
 
 .card {
@@ -47,7 +43,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
     margin: 25px auto;
-    transition: transform 0.5s;
+    position: relative; /* Thêm để tạo lớp tuyết cho ảnh */
 }
 
 .card_img img {
@@ -62,16 +58,16 @@ body {
 }
 
 .card h2 {
+    color: #1e4f42;
     margin-top: 10px;
     font-size: 26px;
-    font-weight: 700; /* Đổi trọng số chữ thành 700 */
-    font-family: 'Montserrat', sans-serif; /* Sử dụng font Montserrat cho tiêu đề */
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .card p {
     color: #c3cfe2;
     margin: 5px 0;
-    font-size: 16px; /* Thay đổi kích thước font cho đoạn văn */
 }
 
 .social {
@@ -111,110 +107,58 @@ body {
     transform: translateY(-5px);
 }
 
-
-.card button {
-    width: 130px;
-    height: 50px;
-    border: 2px solid #7AA1D2;
-    background: transparent;
-    color: white;
-    border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-.card button:hover {
-    background: #003973;
-    transform: translateY(-5px);
-}
-
-/* Hiệu ứng trái tim */
-.hearts span {
+/* Snowfall */
+.snow span {
     position: absolute;
-    display: block;
-    width: 15px;
-    height: 15px;
-    background-color: pink;
-    opacity: 0.6;
-    clip-path: polygon(50% 0%, 0% 50%, 50% 100%, 100% 50%);
-    animation: float 5s infinite;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: snowFall 10s linear infinite;
 }
 
-@keyframes float {
+@keyframes snowFall {
     0% {
-        transform: translate(0, 0) scale(1);
-        opacity: 0.6;
-    }
-    50% {
-        transform: translate(50px, -100px) scale(1.2);
-        opacity: 0.8;
+        transform: translateY(0) translateX(0);
     }
     100% {
-        transform: translate(-30px, -200px) scale(0.8);
-        opacity: 0;
+        transform: translateY(100vh) translateX(50px); /* Rơi chéo từ trên xuống */
     }
 }
 
-.hearts span:nth-child(1) {
-    left: 10%;
-    animation-delay: 0s;
+/* Lớp tuyết đọng */
+.snow-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0; /* Bắt đầu không có tuyết */
+    background: white;
+    opacity: 0.8;
+    border-radius: 0 0 15px 15px; /* Bo góc dưới để khớp với card */
+    transition: height 0.3s ease-in-out;
 }
 
-.hearts span:nth-child(2) {
-    left: 30%;
-    animation-delay: 1s;
+.snow-layer.img-snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.8;
+    border-radius: 50%;
+    z-index: 10;
 }
 
-.hearts span:nth-child(3) {
-    left: 50%;
-    animation-delay: 2s;
+/* Card bị phủ tuyết hoàn toàn */
+.card.snow-covered {
+    background: #f0f0f0; /* Màu nền tuyết */
+    color: #444; /* Đổi màu chữ */
 }
 
-.hearts span:nth-child(4) {
-    left: 70%;
-    animation-delay: 3s;
-}
-
-.hearts span:nth-child(5) {
-    left: 90%;
-    animation-delay: 4s;
-}
-.hearts span:nth-child(6) {
-    left: 30%;
-    animation-delay: 4s;
-}
-.hearts span:nth-child(7) {
-    left: 25%;
-    animation-delay: 4s;
-}
-.hearts span:nth-child(8) {
-    left: 59%;
-    animation-delay: 4s;
-}
-.hearts span:nth-child(9) {
-    left: 65%;
-    animation-delay: 4s;
-}
-.hearts span:nth-child(10) {
-    left: 90%;
-    animation-delay: 4s;
-}
-.hearts span:nth-child(11) {
-    left: 45%;
-    animation-delay: 5s;
-}
-
-.hearts span:nth-child(12) {
-    left: 75%;
-    animation-delay: 6s;
-}
-
-.hearts span:nth-child(13) {
-    left: 45%;
-    animation-delay: 7s;
-}
 .email-corner {
     position: fixed;
     bottom: 15px;
@@ -231,4 +175,13 @@ body {
 
 .email-corner a:hover {
     color: #7AA1D2;
+}
+
+.christmas-tree {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 550px; /* Adjust size */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 100; /* Ensure it's above other elements */
 }
