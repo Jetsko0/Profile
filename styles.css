@@ -176,12 +176,23 @@ body {
 .email-corner a:hover {
     color: #7AA1D2;
 }
-
 .christmas-tree {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    width: 550px; /* Adjust size */
+    width: 550px; /* Default size */
     height: auto; /* Maintain aspect ratio */
     z-index: 100; /* Ensure it's above other elements */
+}
+
+@media (max-width: 768px) {
+    .christmas-tree {
+        width: 300px; /* Scale down for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .christmas-tree {
+        width: 200px; /* Further scale down for mobile */
+    }
 }
