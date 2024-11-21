@@ -8,7 +8,7 @@
 }
 
 body {
-    background: linear-gradient(#ee9ca7, #4CB8C4, #ffdde1);
+    background: linear-gradient( #E1878B, #F9E7E8, #DB6F73);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -21,10 +21,10 @@ body {
 .card {
     height: 500px;
     width: 350px;
-    background: #242628;
+    background: #622930;
     border-radius: 15px;
     text-align: center;
-    border: 3.5px solid white;
+    border: 3.5px solid #f2deb4;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s, box-shadow 0.5s;
     position: relative;
@@ -39,7 +39,7 @@ body {
 .card_img {
     width: 150px;
     height: 150px;
-    border: 4px solid #1D2B64;
+    border: 4px solid #658965;
     border-radius: 50%;
     overflow: hidden;
     margin: 25px auto;
@@ -58,7 +58,7 @@ body {
 }
 
 .card h2 {
-    color: #1e4f42;
+    color: #f2f3f8;
     margin-top: 10px;
     font-size: 26px;
     font-weight: 700;
@@ -79,7 +79,7 @@ body {
 }
 
 .social a {
-    color: beige;
+    color: #b4db84;
     font-size: 24px;
     transition: transform 0.4s, color 0.4s;
 }
@@ -176,23 +176,4 @@ body {
 .email-corner a:hover {
     color: #7AA1D2;
 }
-.christmas-tree {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    width: 550px; /* Default size */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 100; /* Ensure it's above other elements */
-}
 
-@media (max-width: 768px) {
-    .christmas-tree {
-        width: 300px; /* Scale down for tablets */
-    }
-}
-
-@media (max-width: 480px) {
-    .christmas-tree {
-        width: 100px; /* Further scale down for mobile */
-    }
-}
