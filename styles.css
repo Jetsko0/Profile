@@ -156,7 +156,7 @@ body {
     z-index: 9999;
 }
 .christmas-tree {
-    transform: scale(2.81211);  /*hyhyhyhyhyhyhy*/
+    transform: scale(3.91211);  /*hyhyhyhyhyhyhy*/
     transform-origin: bottom left;
 }
 
@@ -544,16 +544,15 @@ body {
 @media (max-width: 768px)
 {
     .christmas-tree{
-        transform: scale(1.51211);
+        transform: scale(2.61211);
     }
 }
 @media (max-width: 320px)
 {
     .christmas-tree{
-        transform: scale(1.5211);
+        transform: scale(1.4211);
     }
 }
-
 /* Container để đặt người tuyết ở bên phải */
 .snowman-container {
     position: fixed;
@@ -748,9 +747,13 @@ body {
 @media (max-width: 768px) {
     .snowman-container {
         bottom: 10px;
-        right: 40px;
+        right: 50px;
         width: 100px;
         height: 120px;
+        
+    }
+    .snowman {
+        transform: scale(1.8211);
     }
     .snowman .head {
         width: 40px;
@@ -768,10 +771,10 @@ body {
     }
     .gift-box{
     bottom: -25px; /* Căn ở đáy */
-    right: -55px; /* Đặt bên phải người tuyết */
+    right: -65px; /* Đặt bên phải người tuyết */
     width: 100px;
     height: 100px;
-    transform: scale(0.7211);
+    transform: scale(0.8211);
     }
 }
 @media (max-width: 320px) {
@@ -804,8 +807,6 @@ body {
     }
 
 }
-
-
 /* NAMETAG */
 .nametag {
     position: fixed;
