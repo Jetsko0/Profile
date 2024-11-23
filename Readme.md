@@ -2,6 +2,7 @@
 Merry Chrismast 🎄🎄🎄
 ##
 Noel Update  
-21/11/2024
+23/11/2024
 ### Tác Giả:
-plgzmt
+plgz0g
+<p class="email-corner"><a href="mailto:ngcuuphilongg@gmail.com">#made by plz0g</a></p>

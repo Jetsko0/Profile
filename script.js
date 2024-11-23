@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let snowCount = 0;
 
     // Tăng số lượng tuyết rơi ban đầu
-    for (let i = 0; i < 650; i++) { // Tăng từ 50 lên 100
+    for (let i = 0; i < 600; i++) { // Tăng từ 50 lên 100
         const snowflake = document.createElement('span');
         snowflake.style.left = `${Math.random() * 100}%`;
         snowflake.style.animationDuration = `${4 + Math.random() * 1}s`; // Giảm thời gian rơi xuống
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         snowflake.addEventListener('animationend', () => {
             snowflake.remove();
             snowCount++;
-            if (snowCount > 100) { // Chỉ phủ tuyết khi số lượng lớn hơn
+            if (snowCount > 10) { // Chỉ phủ tuyết khi số lượng lớn hơn
                 card.classList.add('snow-covered');
             }
         });
@@ -35,3 +35,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // Tăng số lần tạo tuyết trong mỗi giây
     setInterval(createSnowflake, 100); // Giảm từ 200ms xuống 100ms
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Danh sách các màu ngẫu nhiên
+    const lightColors = ["red", "blue", "green", "yellow", "purple", "cyan", "orange", "pink", "white"];
+
+    // Lấy tất cả các bóng đèn
+    const lights = document.querySelectorAll('.christmas-tree .light');
+
+    // Hàm đổi màu ngẫu nhiên cho bóng đèn
+    function changeLightColors() {
+        lights.forEach(light => {
+            const randomColor = lightColors[Math.floor(Math.random() * lightColors.length)];
+            light.style.background = randomColor;
+            light.style.boxShadow = `0 0 10px ${randomColor}`;
+        });
+    }
+
+    // Đổi màu liên tục sau mỗi 1 giây (1000ms)
+    setInterval(changeLightColors, 1000);
+});
+
