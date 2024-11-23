@@ -544,13 +544,13 @@ body {
 @media (max-width: 768px)
 {
     .christmas-tree{
-        transform: scale(1.51211);
+        transform: scale(2.61211);
     }
 }
 @media (max-width: 320px)
 {
     .christmas-tree{
-        transform: scale(1.4211);
+        transform: scale(1.6211);
     }
 }
 /* Container để đặt người tuyết ở bên phải */
