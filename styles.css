@@ -544,7 +544,7 @@ body {
 @media (max-width: 768px)
 {
     .christmas-tree{
-        transform: scale(2.61211);
+        transform: scale(1.51211);
     }
 }
 @media (max-width: 320px)
@@ -569,7 +569,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: scale(1.71211);  /*hyhyhyhyhyhyhy*/
+    transform: scale(2.11211);  /*hyhyhyhyhyhyhy*/
     transform-origin: bottom left;
 }
 
