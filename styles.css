@@ -156,7 +156,7 @@ body {
     z-index: 9999;
 }
 .christmas-tree {
-    transform: scale(3.91211);  /*hyhyhyhyhyhyhy*/
+    transform: scale(2.81211);  /*hyhyhyhyhyhyhy*/
     transform-origin: bottom left;
 }
 
@@ -544,13 +544,13 @@ body {
 @media (max-width: 768px)
 {
     .christmas-tree{
-        transform: scale(2.61211);
+        transform: scale(1.81211);
     }
 }
 @media (max-width: 320px)
 {
     .christmas-tree{
-        transform: scale(1.9211);
+        transform: scale(1.5211);
     }
 }
 /* Container để đặt người tuyết ở bên phải */
