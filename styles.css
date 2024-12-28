@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(#0A0A0A,#161616,#1D1C1C);
+    background: linear-gradient(#0A0A0A, #161616, #1D1C1C);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -15,19 +15,21 @@ body {
     font-family: 'Roboto', sans-serif;
     color: white;
     overflow: hidden;
+    position: relative; /* Đảm bảo các phần tử con được định vị chính xác */
 }
 
 .card {
     height: 500px;
     width: 350px;
-    background: #FFF3D1; 
+    background: #FFF3D1;
     border-radius: 15px;
     text-align: center;
-    border: 4px solid #B23A48; /* Viền đỏ trầm */
+    border: 4px solid #B23A48;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s, box-shadow 0.5s;
     position: relative;
     overflow: hidden;
+    z-index: 10; /* Đảm bảo card luôn ở trên các phần tử nền */
 }
 
 .card:hover {
@@ -38,7 +40,7 @@ body {
 .card_img {
     width: 150px;
     height: 150px;
-    border: 4px solid #B23A48; /* Viền đỏ trầm */
+    border: 4px solid #B23A48;
     border-radius: 50%;
     overflow: hidden;
     margin: 25px auto;
@@ -56,7 +58,7 @@ body {
 }
 
 .card h2 {
-    color: #6C532C; /* Màu nâu vàng cho chữ */
+    color: #6C532C;
     margin-top: 10px;
     font-size: 26px;
     font-weight: 700;
@@ -64,7 +66,7 @@ body {
 }
 
 .card p {
-    color: #6C532C; /* Màu nâu vàng dịu */
+    color: #6C532C;
     margin: 5px 0;
 }
 
@@ -74,25 +76,27 @@ body {
     display: flex;
     justify-content: center;
     gap: 15px;
+    position: relative;
+    z-index: 20; /* Đảm bảo social ở trên các phần tử khác */
 }
 
 .social a {
-    color: #B23A48; /* Màu đỏ trầm */
+    color: #B23A48;
     font-size: 24px;
     transition: transform 0.4s, color 0.4s;
 }
 
 .social a:hover {
-    color: #6C532C; /* Đổi sang nâu vàng khi hover */
+    color: #6C532C;
     transform: translateY(-5px);
 }
 
 .card button {
     width: 130px;
     height: 50px;
-    border: 2px solid #B23A48; /* Viền đỏ trầm */
-    background:#B23A48 ;
-    color: black; /* Màu chữ nâu vàng */
+    border: 2px solid #B23A48;
+    background: #B23A48;
+    color: black;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
     font-weight: bold;
@@ -101,9 +105,27 @@ body {
 }
 
 .card button:hover {
-    background: #B23A48; /* Nền đỏ trầm khi hover */
-    color: #FFF3D1; /* Chữ đổi sang vàng nhạt */
+    background: #B23A48;
+    color: #FFF3D1;
     transform: translateY(-5px);
+}
+
+/* Hiệu chỉnh các phần tử trang trí */
+.fireworks, .mai-left, .mai-right, .banh-chung, .hoa-mai-nho, .hoa-dao-nho, .mua-lan {
+    position: absolute;
+    z-index: 5; /* Đặt thấp hơn card và social */
+}
+
+.mai, .mai-2, .banh-chung-child, .hoa-mai-nho-child, .hoa-dao-nho-child, .mua-lan-child {
+    z-index: 5; /* Đảm bảo các phần tử trang trí không che khuất */
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; /* Đặt phía sau mọi thứ */
 }
 
 /* PHAO HOA */
