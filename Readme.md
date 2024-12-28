@@ -1,7 +1,7 @@
 # plgzmt Profile
 HAPPY NEW YEAR 2025🎄🎄🎄💻
 ## DEMO:
-![alt text](image.png)
+![alt text](Images/demo.png)
 ##
 NEW YEAR!! Update  
 29/12/2024
