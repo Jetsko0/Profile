@@ -1,8 +1,10 @@
 # plgzmt Profile
-Merry Chrismast 🎄🎄🎄
+HAPPY NEW YEAR 2025🎄🎄🎄💻
+## DEMO:
+![alt text](image.png)
 ##
-Noel Update  
-23/11/2024
+NEW YEAR!! Update  
+29/12/2024
 ### Tác Giả:
 plgz0g
 <p class="email-corner"><a href="mailto:ngcuuphilongg@gmail.com">#made by plz0g</a></p>

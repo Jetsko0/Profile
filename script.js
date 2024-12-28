@@ -1,58 +1,92 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const snowContainer = document.querySelector('.snow');
-    const card = document.querySelector('.card');
-    let snowCount = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    // Tạo hiệu ứng pháo hoa
+    function createFirework() {
+        const fireworkContainer = document.querySelector('.fireworks');
+        
+        const firework = document.createElement('div');
+        firework.classList.add('firework');
+        firework.style.left = Math.random() * 100 + 'vw';
+        
+        const maxHeight = window.innerHeight * 0.9;
+        const randomHeight = Math.random() * maxHeight;
+        firework.style.setProperty('--height', -randomHeight + 'px');
+        
+        fireworkContainer.appendChild(firework);
 
-    // Tăng số lượng tuyết rơi ban đầu
-    for (let i = 0; i < 600; i++) { // Tăng từ 50 lên 100
-        const snowflake = document.createElement('span');
-        snowflake.style.left = `${Math.random() * 100}%`;
-        snowflake.style.animationDuration = `${4 + Math.random() * 1}s`; // Giảm thời gian rơi xuống
-        snowflake.style.animationDelay = `${Math.random() * 4}s`;
-        snowflake.style.width = snowflake.style.height = `${Math.random() * 6 + 4}px`; // Kích thước đa dạng hơn
-        snowflake.style.animationTimingFunction = 'ease-in-out';
-        snowContainer.appendChild(snowflake);
-    }
-
-    // Tăng tốc độ tạo tuyết động
-    function createSnowflake() {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        snowflake.style.left = `${Math.random() * 100}vw`;
-        snowflake.style.animationDuration = `${1.5 + Math.random() * 2}s`; // Rơi nhanh hơn
-        snowflake.style.transform = `translateX(${Math.random() * 100}px)`;
-        document.body.appendChild(snowflake);
-
-        snowflake.addEventListener('animationend', () => {
-            snowflake.remove();
-            snowCount++;
-            if (snowCount > 10) { // Chỉ phủ tuyết khi số lượng lớn hơn
-                card.classList.add('snow-covered');
-            }
+        firework.addEventListener('animationend', () => {
+            createExplosion(firework.offsetLeft, randomHeight);
+            firework.remove();
         });
     }
 
-    // Tăng số lần tạo tuyết trong mỗi giây
-    setInterval(createSnowflake, 100); // Giảm từ 200ms xuống 100ms
-});
+    function createExplosion(left, randomHeight) {
+        const numParticles = 20;
+        const explosion = document.createElement('div');
+        explosion.classList.add('explosion');
+        explosion.style.left = left + 'px';
+        explosion.style.bottom = randomHeight + 'px';
+        document.body.appendChild(explosion);
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Danh sách các màu ngẫu nhiên
-    const lightColors = ["red", "blue", "green", "yellow", "purple", "cyan", "orange", "pink", "white"];
+        for (let i = 0; i < numParticles; i++) {
+            const particle = document.createElement('div');
+            particle.style.position = 'absolute';
+            particle.style.width = '4px';
+            particle.style.height = '4px';
+            particle.style.borderRadius = '50%';
+            particle.style.backgroundColor = getRandomColor();
 
-    // Lấy tất cả các bóng đèn
-    const lights = document.querySelectorAll('.christmas-tree .light');
+            const angle = Math.random() * 2 * Math.PI;
+            const radius = Math.random() * 50;
+            const x = Math.cos(angle) * radius + 50;
+            const y = Math.sin(angle) * radius + 50;
 
-    // Hàm đổi màu ngẫu nhiên cho bóng đèn
-    function changeLightColors() {
-        lights.forEach(light => {
-            const randomColor = lightColors[Math.floor(Math.random() * lightColors.length)];
-            light.style.background = randomColor;
-            light.style.boxShadow = `0 0 10px ${randomColor}`;
+            particle.style.left = `${x}px`;
+            particle.style.top = `${y}px`;
+
+            explosion.appendChild(particle);
+
+            particle.addEventListener('animationend', () => {
+                particle.remove();
+            });
+        }
+
+        explosion.addEventListener('animationend', () => {
+            explosion.remove();
         });
     }
 
-    // Đổi màu liên tục sau mỗi 1 giây (1000ms)
-    setInterval(changeLightColors, 1000);
-});
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
 
+    setInterval(createFirework, 200);
+
+    // Nhạc nền
+    const music = document.getElementById('background-music');
+    music.volume = 0.02;
+
+    // Tạo hiệu ứng ngôi sao lấp lánh
+    const starContainer = document.createElement('div');
+    starContainer.classList.add('stars');
+    document.body.appendChild(starContainer);
+
+    function createStars() {
+        const numStars = 100; // Số lượng ngôi sao
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.left = Math.random() * 100 + 'vw'; // Vị trí ngang ngẫu nhiên
+            star.style.top = Math.random() * 100 + 'vh'; // Vị trí dọc ngẫu nhiên
+            star.style.animationDelay = Math.random() * 2 + 's'; // Thời gian bắt đầu ngẫu nhiên
+            star.style.animationDuration = Math.random() * 3 + 2 + 's'; // Thời gian lấp lánh ngẫu nhiên
+            starContainer.appendChild(star);
+        }
+    }
+
+    createStars();
+});

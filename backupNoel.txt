@@ -1,0 +1,816 @@
+###########
+index:
+---------------------------------------
+ <!-- Cây thông -->
+    <div class="christmas-tree">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="trunk"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="ribbon"></div>
+        <div class="ribbon"></div>
+        <div class="ribbon"></div>
+        <div class="ribbon"></div>
+        <div class="ribbon"></div>
+        <div class="star"></div>
+        <div class="gift-1"></div>
+        <div class="gift-2"></div>
+        <div class="gift-3"></div>
+        <div class="gift-4"></div>
+
+    </div>
+    <!-- SNOWMAN -->
+    <div class="snowman-container">
+        <div class="snowman">
+            <div class="head">
+                <div class="hat"></div>
+            </div>
+            <div class="body"></div>
+            <div class="bottom"></div>
+            <div class="eyes"></div>
+            <div class="nose"></div>
+            <div class="buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="arms">
+                <div class="left-arm"></div>
+                <div class="right-arm"></div>
+            </div>
+        </div>
+        <div class="gift-box">
+            <div class="box"></div>
+            <div class="ribbon"></div>
+            <div class="knot"></div>
+        </div>
+    <div class="snowman-container">
+    <div class="snowman">
+        <div class="head">
+            <div class="hat"></div>
+        </div>
+        <div class="body"></div>
+        <div class="bottom"></div>
+            <div class="eyes"></div>
+            <div class="nose"></div>
+        <div class="buttons">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="arms">
+            <div class="left-arm"></div>
+            <div class="right-arm"></div>
+        </div>
+    </div>
+    <div class="gift-box">
+        <div class="box"></div>
+        <div class="ribbon"></div>
+        <div class="knot"></div>
+    </div>
+    -------------------------------------------
+
+    CSS:
+    ------------------------------------------
+    /* Cây thông mới */
+
+.christmas-tree {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 60px;
+    height: 100px;
+    background: transparent;
+    z-index: 9999;
+}
+.christmas-tree {
+    transform: scale(2.81211);  /*hyhyhyhyhyhyhy*/
+    transform-origin: bottom left;
+}
+
+/* Các tầng của cây thông */
+.christmas-tree .layer {
+    position: absolute;
+    background: #006400; /* Màu xanh đậm hơn */
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 100, 0, 0.8);
+}
+
+.christmas-tree .layer:nth-child(1) {
+    width: 70px;
+    height: 20px;
+    bottom: 30px;
+}
+
+.christmas-tree .layer:nth-child(2) {
+    width: 60px;
+    height: 20px;
+    bottom: 50px;
+}
+
+.christmas-tree .layer:nth-child(3) {
+    width:50px;
+    height: 20px;
+    bottom: 70px;
+}
+.christmas-tree .layer:nth-child(4) {
+    width:40px;
+    height: 20px;
+    bottom: 90px;
+}
+
+.christmas-tree .layer:nth-child(5) {
+    width:30px;
+    height: 20px;
+    bottom: 110px;
+}
+.christmas-tree .layer:nth-child(6) {
+    width:20px;
+    height: 20px;
+    bottom: 130px;
+}
+
+
+/* Thân cây */
+.christmas-tree .trunk {
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    background: #8B4513;
+    bottom: -19px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Đèn trang trí */
+.christmas-tree .light {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: gold;
+    border-radius: 70%;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 2);
+    animation: blink 4s infinite;
+}
+
+/* Vị trí các đèn */
+.christmas-tree .light:nth-child(8) {
+    bottom: 120px;
+    left: 20%;
+    animation-delay: 0.3s;
+}
+
+.christmas-tree .light:nth-child(9) {
+    bottom: 110px;
+    left: 30%;
+    animation-delay: 0.6s;
+}
+
+.christmas-tree .light:nth-child(10) {
+    bottom: 100px;
+    left: 40%;
+    animation-delay: 0.4s;
+}
+.christmas-tree .light:nth-child(11) {
+    bottom: 90px;
+    left: 50%;
+    animation-delay: 0.64s;
+}
+.christmas-tree .light:nth-child(12) {
+    bottom: 80px;
+    left: 60%;
+    animation-delay: 0.44s;
+}
+.christmas-tree .light:nth-child(13) {
+    bottom: 70px;
+    left: 70%;
+    animation-delay: 0.55s;
+}
+.christmas-tree .light:nth-child(14) {
+    bottom: 60px;
+    left: 80%;
+    animation-delay: 0.7s;
+}
+.christmas-tree .light:nth-child(15) {
+    bottom: 50px;
+    left: 90%;
+    animation-delay: 0.53s;
+}
+.christmas-tree .light:nth-child(16) {
+    bottom: 100px;
+    left: 70%;
+    animation-delay: 0.4s;
+}
+.christmas-tree .light:nth-child(17) {
+    bottom: 80px;
+    left: 40%;
+    animation-delay: 0.4s;
+}
+.christmas-tree .light:nth-child(18) {
+    bottom: 70px;
+    left:25%;
+    animation-delay: 0.4s;
+}
+.christmas-tree .light:nth-child(19) {
+    bottom: 60px;
+    left:15%;
+    animation-delay: 0.4s;
+}
+.christmas-tree .light:nth-child(20) {
+    bottom:50px;
+    left:5%;
+    animation-delay: 0.4s;
+}
+.christmas-tree .light:nth-child(21) {
+    bottom:140px;
+    left:45%;
+    animation-delay: 0.4s;
+}
+.christmas-tree .light:nth-child(22) {
+    bottom:130px;
+    left:55%;
+    animation-delay: 0.4s;
+}
+.christmas-tree .light:nth-child(23) {
+    bottom:120px;
+    left:65%;
+    animation-delay: 0.4s;
+}
+/* Hiệu ứng nhấp nháy */
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Ngôi sao trên đỉnh cây thông */
+.christmas-tree .star {
+    position: absolute;
+    top: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 23px;
+    height: 23px;
+    clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 68% 57%, 
+        79% 91%, 50% 70%, 21% 91%, 32% 57%, 
+        2% 35%, 39% 35%
+    );
+    background: #fffabf;
+    border-radius: 70%;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 2);
+    border-radius: 70%;
+    animation: blink 1.5s infinite;
+    
+}
+
+@keyframes starTwinkle {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6);
+    }
+}
+/* Hiệu ứng nhấp nháy */
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Hộp quà dưới gốc cây thông */
+.christmas-tree .gift-1 {
+    position: absolute;
+    bottom:-8px; /* Đặt sát dưới gốc */
+    width: 35px;
+    height: 35px;
+    background: #960014; /* Màu nâu cam cho hộp quà */
+    left: calc(50% - 30px); /* Cân chỉnh để phù hợp với kích thước */
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+/* Nơ trên hộp quà */
+.christmas-tree .gift-1:before,
+.christmas-tree .gift-1::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+}
+
+.christmas-tree .gift-1::before {
+    width: 3px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.christmas-tree .gift-1::after {
+    width: 100%;
+    height: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Hộp quà 2 */
+.christmas-tree .gift-2 {
+    position: absolute;
+    bottom:-8px; /* Đặt sát dưới gốc */
+    width: 25px;
+    height: 25px;
+    background: #458A0E; /* Màu nâu cam cho hộp quà */
+    left: calc(50% - 0px); /* Cân chỉnh để phù hợp với kích thước */
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+/* Nơ trên hộp quà */
+.christmas-tree .gift-2:before,
+.christmas-tree .gift-2::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+}
+
+.christmas-tree .gift-2::before {
+    width: 3px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.christmas-tree .gift-2::after {
+    width: 100%;
+    height: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Hộp quà 3 */
+.christmas-tree .gift-3 {
+    position: absolute;
+    bottom:27.5px; /* Đặt sát dưới gốc */
+    width: 20px;
+    height: 20px;
+    background: #65D60B; /* Màu nâu cam cho hộp quà */
+    left: calc(10% - 0px); /* Cân chỉnh để phù hợp với kích thước */
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+/* Nơ trên hộp quà */
+.christmas-tree .gift-3:before,
+.christmas-tree .gift-3::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+}
+
+.christmas-tree .gift-3::before {
+    width: 3px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.christmas-tree .gift-3::after {
+    width: 100%;
+    height: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Hộp quà 4 */
+.christmas-tree .gift-4 {
+    position: absolute;
+    bottom:-8px; /* Đặt sát dưới gốc */
+    width: 15px;
+    height: 15px;
+    background: #ECB3B2; /* Màu nâu cam cho hộp quà */
+    left: calc(86% - 0px); /* Cân chỉnh để phù hợp với kích thước */
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+/* Nơ trên hộp quà */
+.christmas-tree .gift-4:before,
+.christmas-tree .gift-4::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+}
+
+.christmas-tree .gift-4::before {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.christmas-tree .gift-4::after {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Nơ đỏ trên cây thông */
+.christmas-tree .ribbon {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #BD0019;
+    clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 68% 57%, 
+        79% 91%, 50% 70%, 21% 91%, 32% 57%, 
+        2% 35%, 39% 35%
+    );   
+    background: #BD0019;
+    border-radius: 70%;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 2);
+    animation: blink 2s infinite;
+}
+
+/* Vị trí các nơ đỏ */
+.christmas-tree .ribbon:nth-child(24) {
+    bottom: 100px;
+    left: 50%;
+}
+
+.christmas-tree .ribbon:nth-child(25) {
+    bottom: 85px;
+    left: 10%;
+}
+
+.christmas-tree .ribbon:nth-child(26) {
+    bottom: 80px;
+    left: 70%;
+}
+
+.christmas-tree .ribbon:nth-child(27) {
+    bottom: 60px;
+    left: 40%;
+}
+
+.christmas-tree .ribbon:nth-child(28) {
+    bottom: 40px;
+    left: 60%;
+}
+
+
+/* Hiệu ứng nhấp nháy */
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .christmas-tree{
+        transform: scale(1.81211);
+    }
+}
+@media (max-width: 320px)
+{
+    .christmas-tree{
+        transform: scale(1.5211);
+    }
+}
+/* Container để đặt người tuyết ở bên phải */
+.snowman-container {
+    position: fixed;
+    bottom: -30px;
+    right: 100px;
+    z-index: 1000;
+    width: 120px;
+    height: 180px;
+}
+
+/* Toàn bộ người tuyết */
+.snowman {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(2.11211);  /*hyhyhyhyhyhyhy*/
+    transform-origin: bottom left;
+}
+
+/* Các phần của người tuyết */
+.snowman .head,
+.snowman .body,
+.snowman .bottom {
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Đầu */
+.snowman .head {
+    width: 50px;
+    height: 50px;
+    margin-bottom: -10px;
+}
+
+/* Thân trên */
+.snowman .body {
+    width: 70px;
+    height: 70px;
+    margin-bottom: -15px;
+}
+
+/* Thân dưới */
+.snowman .bottom {
+    width: 90px;
+    height: 90px;
+}
+
+/* Mắt */
+.snowman .eyes {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.snowman .eyes::before,
+.snowman .eyes::after {
+    content: '';
+    background: #000;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+/* Mũi (Cà rốt) */
+.snowman .nose {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 5px;
+    background: orange;
+    border-radius: 50%;
+}
+
+/* Nút áo */
+.snowman .buttons {
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.snowman .buttons span {
+    background: #000;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+/* Tay */
+.snowman .arms .left-arm,
+.snowman .arms .right-arm {
+    position: absolute;
+    top: 50px;
+    width: 40px;
+    height: 2px;
+    background: #6b4e16;
+}
+
+.snowman .arms .left-arm {
+    left: -10px;
+    transform: rotate(30deg);
+}
+
+.snowman .arms .right-arm {
+    right: -10px;
+    transform: rotate(-30deg);
+}
+/* Mũ len */
+.snowman .hat {
+    position: absolute;
+    top: -25px; /* Đặt mũ phía trên đầu */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 30px;
+    background: red; /* Màu chính của mũ len */
+    border-radius: 10px 10px 0 0;
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Viền của mũ len */
+.snowman .hat::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: white; /* Màu viền mũ */
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+/* Hộp quà */
+.gift-box {
+    position: absolute;
+    bottom: 29px; /* Căn ở đáy */
+    right: -100px; /* Đặt bên phải người tuyết */
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Phần hộp */
+.gift-box .box {
+    width: 100px;
+    height: 100px;
+    background:   #a8acce; /* Màu hộp quà */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Nơ ngang */
+.gift-box .ribbon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: #5098b3; /* Màu dây nơ */
+    transform: translateY(-50%);
+}
+
+/* Nút thắt nơ */
+.gift-box .knot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background:#fde28e ;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Đảm bảo responsive */
+@media (max-width: 768px) {
+    .snowman-container {
+        bottom: 10px;
+        right: 50px;
+        width: 100px;
+        height: 120px;
+        
+    }
+    .snowman {
+        transform: scale(1.8211);
+    }
+    .snowman .head {
+        width: 40px;
+        height: 40px;
+        margin-bottom: -5px;
+    }
+    .snowman .body {
+        width: 60px;
+        height: 60px;
+        margin-bottom: -10px;
+    }
+    .snowman .bottom {
+        width: 70px;
+        height: 70px;
+    }
+    .gift-box{
+    bottom: -25px; /* Căn ở đáy */
+    right: -65px; /* Đặt bên phải người tuyết */
+    width: 100px;
+    height: 100px;
+    transform: scale(0.8211);
+    }
+}
+@media (max-width: 320px) {
+    .snowman-container {
+        bottom: 10px;
+        right: 40px;
+        width: 100px;
+        height: 120px;
+    }
+    .snowman .head {
+        width: 40px;
+        height: 40px;
+        margin-bottom: -5px;
+    }
+    .snowman .body {
+        width: 60px;
+        height: 60px;
+        margin-bottom: -10px;
+    }
+    .snowman .bottom {
+        width: 70px;
+        height: 70px;
+    }
+    .gift-box{
+    bottom: -25px; /* Căn ở đáy */
+    right: -55px; /* Đặt bên phải người tuyết */
+    width: 100px;
+    height: 100px;
+    transform: scale(0.7211);
+    }
+}
+----------------------------------------------------
+
+####### NEW YEAR######
+---------
+/* PHAO HOA */
+.fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.fireworks span {
+    position: absolute;
+    width: 4px; /* Kích thước mặc định, sẽ thay đổi qua JS */
+    height: 4px;
+    background: radial-gradient(circle, white, transparent); /* Placeholder, JS sẽ thay màu */
+    border-radius: 50%;
+    animation: explode 1.5s ease-out forwards, move 1.5s ease-out forwards, fall 1.5s 1.5s linear forwards;
+    transform-origin: center;
+    opacity: 0;
+}
+
+@keyframes explode {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 0.7;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(var(--x) * 100px), calc(var(--y) * (window.innerHeight / 2) / 100px)); /* Di chuyển lên giữa */
+    }
+}
+
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
